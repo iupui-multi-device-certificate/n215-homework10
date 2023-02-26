@@ -1,8 +1,11 @@
+import { figureCard } from "./views/components/_figureCardView.js";
+
 const titleBase = "travel-fly";
 // const changeContent = (contentID) => $("#app").html(eval(contentID));
 
 const setHome = () => {
   // $("#app").html(homeContent);
+  $("#app").html(figureCard);
   $(document).attr("title", `${titleBase} | HOME`);
 };
 
