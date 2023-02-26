@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Component</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      .component {
+        /* background-color: lightsteelblue; */
+        height: 100%;
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      .blog-post {
+        display: flex;
+        gap: 20px;
+      }
+      .blog-date-block {
+        /* replace with SASS variables */
+        color: white;
+        background-color: #79addc;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .day {
+        font-size: 22px;
+        font-weight: 700;
+      }
+
+      .month {
+        font-size: 12px;
+      }
+
+      .blog-content {
+        width: 95%;
+      }
+      .blog-image {
+        margin-bottom: 20px;
+        width: 100%;
+      }
+
+      .blog-text {
+        max-width: 380px;
+      }
+      .blog-title {
+        font-size: 15px;
+        margin-bottom: 11px;
+      }
+
+      .blog-paragraph {
+        font-size: 13px;
+        color: #79addc;
+      }
+
+      /* breakpoint small */
+      @media only screen and (max-width: 576px) {
+        .blog-post {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="component">
+      <h1>Blog Post</h1>
+      <article class="blog-post">
+        <div class="blog-date-block">
+          <div class="day">06</div>
+          <div class="month upper">Jun</div>
+        </div>
+        <div class="blog-content">
+          <img
+            src="../images/blogs/blog-post-image.png"
+            alt=""
+            class="blog-image"
+          />
+          <div class="blog-text">
+            <h1 class="blog-title">Sed et persipiatis unde omnis iste natus</h1>
+            <p class="blog-paragraph">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>

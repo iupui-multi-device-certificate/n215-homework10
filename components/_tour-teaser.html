@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Component</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <style>
+      .component {
+        background-color: lightsteelblue;
+        height: 100%;
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      /* .tour-teaser figure {
+        position: relative;
+        overflow: hidden;
+        margin: 0;
+        padding: 30% 0;
+        cursor: pointer;
+      }
+
+      .tour-teaser figure::before {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(
+          rgba(0, 0, 0, 0.33),
+          rgba(0, 0, 0, 0.33)
+        );
+        content: "";
+      }
+
+      .tour-teaser figcaption {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        text-align: center;
+        opacity: 1;
+        transform: translateY(1rem);
+        transition: all 0.3s ease-in-out;
+        max-width: 90%;
+      }
+
+      .tour-teaser figcaption h1 {
+        margin-bottom: 0;
+      }
+
+      .tour-teaser figcaption h2 {
+        text-transform: unset;
+      }
+
+      .tour-teaser figcaption {
+        color: #fff;
+      }
+      .tour-teaser figcaption a {
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+      }
+
+      .tour-teaser img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        mix-blend-mode: multiply;
+        filter: saturate(0);
+        transition: all 0.3s ease-in-out;
+      } */
+
+      /* make a variable for btn btn--round-border-radius that can be passed in */
+      /* .btn btn--round {
+        background-color: #79addc;
+        padding: 0.625rem 1.375rem;
+        border-radius: 1.25rem;
+      } */
+    </style>
+  </head>
+  <body>
+    <!-- 
+      https://www.jonathan-harrell.com/blog/semantic-image-overlays-with-object-fit/ 
+      https://codepen.io/jonathanharrell/pen/vVEerg
+    -->
+    <div class="component">
+      <article class="tour-teaser">
+        <figure>
+          <img src="images/tours/australia-small.png" alt="" />
+          <figcaption>
+            <h1 class="font-size-60 upper figure-title">Australia</h1>
+            <h2 class="font-size-30 title">from $1800</h2>
+            <a href="#" class="btn btn--round">Learn More</a>
+          </figcaption>
+        </figure>
+      </article>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+$brand-primary: #79addc;
+$brand-dark: #000;
+$brand-light: #fff;
+
+$font-dark: $brand-dark;
+$font-light: $brand-light;
+
+//Research to help decide what breakpoints to use
+// https://getbootstrap.com/docs/5.2/layout/breakpoints/
+//https://testsigma.com/blog/css-breakpoints/
+// https://polypane.app/blog/the-breakpoints-we-tested-in-2021-and-the-ones-to-test-in-2022/
+//https://get.foundation/sites/docs/media-queries.html
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+//media query mixins
+// https://codepen.io/igoveyner/pen/zYwBZdy
+
+//ideally use mixin for queries.
+//however, Todd did not nest the media query in the forms video.
+//both methods have their pros and cons
+//https://stackoverflow.com/questions/62528918/media-query-scss-breakpoints-best-practice
+@mixin media-sm {
+  @media screen and (max-width: $breakpoint-sm) {
+    @content;
+  }
+}
+@mixin media-md {
+  @media screen and (max-width: $breakpoint-md) {
+    @content;
+  }
+}
+@mixin media-lg {
+  @media screen and (max-width: $breakpoint-lg) {
+    @content;
+  }
+}
+@mixin media-xl {
+  @media screen and (max-width: $breakpoint-xl) {
+    @content;
+  }
+}
+@mixin media-xxl {
+  @media screen and (max-width: $breakpoint-xxl) {
+    @content;
+  }
+}

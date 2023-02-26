@@ -1,0 +1,40 @@
+$color_1: var(--brand-primary);
+
+/* using bootstrap breakpoints
+https://getbootstrap.com/docs/5.2/layout/breakpoints/ */
+/* could be refactored to use a hamburger menu instead */
+.about-text {
+  margin-bottom: 6rem;
+}
+.quote {
+  width: 66%;
+  display: flex;
+
+  gap: 1.375rem;
+  padding-bottom: 2.25rem;
+}
+.client-image {
+  width: 260px;
+}
+.quote-text {
+  blockquote {
+    p {
+      padding-bottom: 1.25rem;
+      font-style: italic;
+    }
+  }
+}
+.quote-author {
+  text-align: right;
+  color: $brand-primary;
+}
+
+@media only screen and (max-width: $breakpoint-lg) {
+  .quote {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}

@@ -1,0 +1,642 @@
+@charset "UTF-8";
+/* reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+  skip setting html and body height for now
+  my portfolio site is responsive and works fine without these set
+*/
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+@font-face {
+  font-family: "Gill Sans";
+  src: url(fonts/gill-sans.otf) format("otf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gill Sans";
+  src: url(fonts/gill-sans.otf) format("otf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gill Sans";
+  src: url(fonts/gill-sans-italic.otf) format("otf");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Gill Sans";
+  src: url(fonts/gill-sans-light.otf) format("otf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gill Sans";
+  src: url(fonts/gill-sans-light-italic.otf) format("otf");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Proxima Nova Extra Condensed Thin";
+  src: url(fonts/proxima-nova-extra-condensed-thin.otf) format("otf");
+  font-weight: 100;
+  font-style: normal;
+}
+/* typography */
+.gill-sans-italic-light {
+  font-family: "Gill Sans, sans-serif";
+  font-weight: 100;
+  font-style: italic;
+}
+
+/*
+  Methods found so far are rather hacky. Linear gradient probably best method, but need to look into this further.
+
+*/
+/* font sizes may need to be reduced on mobile */
+.font-size-80 {
+  font-size: 3.75rem;
+}
+
+.font-size-60 {
+  font-size: 3.75rem;
+}
+
+.font-size-30 {
+  font-size: 1.875rem;
+}
+
+.tour-teaser figure figcaption .figure-title, .title {
+  font-family: "Proxima Nova Extra Condensed Thin, sans-serif";
+  margin-bottom: 2.375rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.title {
+  white-space: nowrap;
+}
+
+.underline:after {
+  content: "";
+  display: block;
+  width: 72%;
+  height: 1px;
+  background-color: #000;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+body {
+  font-family: "Gill Sans, sans-serif";
+  /* base font size */
+  font-size: 1rem;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  font-weight: normal;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  min-height: 100%;
+  /* min-height: 100vh; */
+}
+
+.btn, .btn--round {
+  background-color: #79addc;
+  padding: 0.625rem 1.375rem;
+  border: none;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.btn--round {
+  border-radius: 1.25rem;
+}
+.btn--small {
+  width: 133px;
+  white-space: nowrap;
+}
+.btn--medium {
+  width: 167px;
+}
+.btn--wide {
+  width: 100%;
+}
+
+footer {
+  background-color: #79addc;
+  margin-top: 12.5rem;
+  height: 100px;
+}
+footer .footer-content {
+  height: 100%;
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .logo {
+  font-size: 1.25rem;
+  color: #fff;
+  padding-top: 30px;
+  border: solid thin;
+}
+footer .copyright {
+  font-size: 0.75rem;
+  color: #fff;
+}
+footer .social {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1.375rem;
+}
+
+@media only screen and (max-width: 992px) {
+  footer .copyright {
+    display: none;
+  }
+}
+/*  from bootstrap */
+/* prevents overlap issue have w/ fixed */
+.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.navbar {
+  margin-left: auto;
+  margin-right: auto;
+  height: 90px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid;
+  margin-bottom: 3rem;
+}
+.navbar .logo {
+  font-size: 1.25rem;
+  padding-top: 30px;
+  border: solid thin;
+}
+.navbar .links {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.navbar .links a {
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.navbar--light-font {
+  color: #fff;
+}
+.navbar--light-font .links {
+  color: #79addc;
+}
+.navbar--light-font .links a {
+  color: #fff;
+}
+.navbar--dark-font {
+  color: #000;
+}
+.navbar--dark-font .links {
+  color: #79addc;
+}
+.navbar--dark-font .links a {
+  color: #000;
+}
+
+@media only screen and (max-width: 992px) {
+  .navbar {
+    text-align: center;
+  }
+  .navbar .logo {
+    display: none;
+  }
+  .navbar .links {
+    justify-content: center;
+  }
+}
+.tour-teasers {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, minmax(236px, 1fr));
+  gap: 2rem;
+}
+
+.tour-teaser {
+  justify-self: center;
+}
+.tour-teaser figure {
+  position: relative;
+  width: 236px;
+  height: 304px;
+  background: #000;
+}
+.tour-teaser figure img {
+  opacity: 0.5;
+}
+.tour-teaser figure figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+}
+.tour-teaser figure figcaption .figure-title {
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+@media only screen and (max-width: 992px) {
+  .tour-teasers {
+    grid-template-columns: 1fr;
+  }
+}
+.banner-large {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-bottom: 3rem;
+}
+.banner-large img {
+  filter: brightness(50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+.banner-large .banner-text {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.banner-large .banner-text .align-right {
+  text-align: right;
+}
+
+.banner-medium {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-bottom: 3rem;
+}
+.banner-medium img {
+  filter: brightness(50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+.banner-medium .banner-text {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper-contact {
+  max-width: 100%;
+  display: flex;
+  gap: 50px;
+}
+.wrapper-contact .location {
+  max-width: 100%;
+}
+.wrapper-contact .location .map {
+  margin-bottom: 34px;
+  max-width: 100%;
+  height: 442px;
+}
+.wrapper-contact .location address {
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 100;
+  max-width: 100%;
+  height: 161px;
+}
+.wrapper-contact .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  width: 529px;
+  height: 560px;
+}
+.wrapper-contact .contact-form .form-element {
+  border: none;
+  background-color: #f5f5f5;
+  height: 60px;
+  padding: 20px;
+}
+.wrapper-contact .contact-form .message {
+  height: 200px;
+}
+
+.wrapper-booking {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 21px;
+  font-size: 18px;
+}
+.wrapper-booking .form-element-x-large, .wrapper-booking .form-element-large, .wrapper-booking .form-element-small, .wrapper-booking .form-element {
+  height: 60px;
+  margin-bottom: 20px;
+  border: thin #79addc solid;
+  background-color: transparent;
+}
+.wrapper-booking .form-element {
+  width: 344px;
+  padding: 21px;
+}
+.wrapper-booking .form-element-small {
+  width: 103px;
+}
+.wrapper-booking .form-element-large {
+  width: 453px;
+}
+.wrapper-booking .form-element-x-large {
+  width: 698px;
+}
+.wrapper-booking .check-in,
+.wrapper-booking .check-out,
+.wrapper-booking .selections {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper-booking .select-wrapper {
+  position: relative;
+}
+.wrapper-booking .select-wrapper::after {
+  content: "▼";
+  font-size: 1rem;
+  top: 24px;
+  right: 10px;
+  position: absolute;
+}
+.wrapper-booking .message {
+  width: 100%;
+  height: 192px;
+  border: thin #79addc solid;
+}
+
+@media only screen and (max-width: 992px) {
+  .wrapper-contact {
+    flex-direction: column-reverse;
+  }
+  .wrapper-contact .location {
+    width: 100%;
+  }
+  .wrapper-contact .contact-form {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .wrapper-booking .booking-form {
+    width: 100%;
+  }
+  .wrapper-booking .form-element {
+    width: 100%;
+  }
+  .wrapper-booking .form-element-small {
+    width: 15%;
+  }
+}
+.hero {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../images/hero.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.hero .hero-cta {
+  color: #fff;
+  width: 484px;
+  height: 54px;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 46px;
+}
+.hero .hero-button {
+  width: 121.62px;
+  height: 40.04px;
+  padding: 9px 20.3px 11px 19.3px;
+}
+
+.promos {
+  margin-top: -43px;
+  padding-bottom: 40px;
+}
+
+.inner-container {
+  max-width: 818px;
+  margin: 0 auto;
+}
+
+/* using bootstrap breakpoints
+https://getbootstrap.com/docs/5.2/layout/breakpoints/ */
+/* could be refactored to use a hamburger menu instead */
+.about-text {
+  margin-bottom: 6rem;
+}
+
+.quote {
+  width: 66%;
+  display: flex;
+  gap: 1.375rem;
+  padding-bottom: 2.25rem;
+}
+
+.client-image {
+  width: 260px;
+}
+
+.quote-text blockquote p {
+  padding-bottom: 1.25rem;
+  font-style: italic;
+}
+
+.quote-author {
+  text-align: right;
+  color: #79addc;
+}
+
+@media only screen and (max-width: 992px) {
+  .quote {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}
+.trip-plan-item {
+  padding-bottom: 4.375rem;
+}
+
+.body-text {
+  font-family: "Gill Sans, sans-serif";
+  font-weight: 100;
+}
+
+.tour-images {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2.625rem;
+  margin-bottom: 1.8125rem;
+}
+
+.outro {
+  padding: 80px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper-special-offers {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.wrapper-special-offers .offer {
+  display: flex;
+  gap: 20px;
+}
+.wrapper-special-offers .offer .info {
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper-special-offers .offer .info h2 {
+  margin-bottom: 28px;
+}
+.wrapper-special-offers .offer .info p {
+  margin-bottom: 52px;
+  font-weight: 100;
+}
+
+.blogs {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.blogs .blog-post {
+  display: flex;
+  gap: 20px;
+}
+.blogs .blog-post .blog-date-block {
+  /* replace with SASS variables */
+  color: #fff;
+  background-color: #79addc;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.blogs .blog-post .blog-date-block .day {
+  font-size: 22px;
+  font-weight: 700;
+}
+.blogs .blog-post .blog-date-block .month {
+  font-size: 12px;
+}
+.blogs .blog-post .blog-content {
+  width: 95%;
+}
+.blogs .blog-post .blog-content .blog-image {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.blogs .blog-post .blog-content .blog-text {
+  max-width: 380px;
+}
+.blogs .blog-post .blog-content .blog-text .blog-title {
+  font-size: 15px;
+  margin-bottom: 11px;
+}
+.blogs .blog-post .blog-content .blog-text .blog-paragraph {
+  font-size: 13px;
+  color: #79addc;
+}
+
+/* breakpoint small */
+@media only screen and (max-width: 576px) {
+  .blog-post {
+    flex-direction: column;
+  }
+}

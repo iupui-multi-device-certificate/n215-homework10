@@ -1,0 +1,23 @@
+//TODO: convert to @use method per partials & modules info in https://sass-lang.com/guide & index per https://www.youtube.com/watch?v=CR-a8upNjJ0
+//TODO: generalize spacing calculation
+
+//core
+@import "core/reset";
+@import "core/variables";
+@import "core/typography";
+@import "core/base";
+
+//components
+@import "components/button";
+@import "components/footer";
+@import "components/navigation";
+@import "components/tour-teasers";
+@import "components/_banner";
+@import "components/form";
+
+//pages
+@import "pages/home";
+@import "pages/about";
+@import "pages/tour";
+@import "pages/special-offers";
+@import "pages/blog";

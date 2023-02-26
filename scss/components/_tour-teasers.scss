@@ -1,0 +1,57 @@
+.tour-teasers {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, minmax(236px, 1fr));
+  gap: 2rem;
+}
+
+.tour-teaser {
+  justify-self: center;
+
+  // https://dev.to/nazanin_ashrafi/how-to-darken-an-image-with-css-4f5h
+  figure {
+    position: relative;
+    width: 236px;
+    height: 304px;
+    background: #000;
+
+    img {
+      opacity: 0.5;
+    }
+
+    figcaption {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      // text-align: center;
+      //based on bootstrap card-img-overlay
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      color: $brand-light;
+
+      //TODO: fix Australia / long text not fitting
+      //maybe media query?
+      //https://www.w3schools.com/howto/howto_css_responsive_text.asp
+      //or calculate font size for h1 & h2 based on screen
+      //https://blog.hubspot.com/website/responsive-text
+
+      .figure-title {
+        @extend %title-shared;
+        margin-bottom: 0;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-lg) {
+  .tour-teasers {
+    grid-template-columns: 1fr;
+  }
+}

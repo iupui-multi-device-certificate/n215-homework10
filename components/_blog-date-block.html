@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Component</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      .component {
+        background-color: lightsteelblue;
+        height: 100%;
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      .blog-date-block {
+        /* background-color: pink; */
+        /* replace with SASS variables */
+        color: white;
+        background-color: #79addc;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .day {
+        /* background-color: aqua; */
+        font-size: 22px;
+        font-weight: 700;
+      }
+
+      .month {
+        /* background-color: greenyellow; */
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="component">
+      <h1>Div style</h1>
+      <div class="blog-date-block">
+        <div class="day">06</div>
+        <div class="month upper">Jun</div>
+      </div>
+      <!-- MAYBE: convert to semantic if time -->
+      <h1>Semantic style (using time element)</h1>
+    </div>
+  </body>
+</html>

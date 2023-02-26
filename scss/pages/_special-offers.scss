@@ -1,0 +1,27 @@
+.wrapper-special-offers {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  .offer {
+    display: flex;
+    gap: 20px;
+
+    .info {
+      width: 290px;
+      display: flex;
+      flex-direction: column;
+      h2 {
+        margin-bottom: 28px;
+      }
+
+      p {
+        margin-bottom: 52px;
+        font-weight: 100;
+      }
+      // a {
+      //   justify-self: flex-end;
+      // }
+    }
+  }
+}

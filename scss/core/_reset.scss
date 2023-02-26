@@ -1,0 +1,28 @@
+/* reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+  skip setting html and body height for now
+  my portfolio site is responsive and works fine without these set
+*/
+
+//reset for forms
+//https://developer.mozilla.org/en-US/docs/Learn/Forms/Styling_web_forms
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+//https://developer.mozilla.org/en-US/docs/Learn/Forms/Advanced_form_styling
+select {
+  appearance: none;
+}

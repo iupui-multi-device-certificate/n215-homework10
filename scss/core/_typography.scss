@@ -1,0 +1,108 @@
+//fonts
+
+//tried to set up per https://www.smashingmagazine.com/2013/02/setting-weights-and-styles-at-font-face-declaration/
+
+// Regular, weight: 400
+@font-face {
+  font-family: "Gill Sans";
+  src: url(fonts/gill-sans.otf) format("otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+// 700 bold
+@font-face {
+  font-family: "Gill Sans";
+  src: url(fonts/gill-sans.otf) format("otf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+// italic
+@font-face {
+  font-family: "Gill Sans";
+  src: url(fonts/gill-sans-italic.otf) format("otf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+// light
+@font-face {
+  font-family: "Gill Sans";
+  src: url(fonts/gill-sans-light.otf) format("otf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+// light italic
+@font-face {
+  font-family: "Gill Sans";
+  src: url(fonts/gill-sans-light-italic.otf) format("otf");
+  font-weight: 300;
+  font-style: italic;
+}
+
+// downloaded via Adobe CC
+//transferred per https:github.com/echeno/adobe-font-extractor */
+@font-face {
+  font-family: "Proxima Nova Extra Condensed Thin";
+  src: url(fonts/proxima-nova-extra-condensed-thin.otf) format("otf");
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* typography */
+$body-font-family: "Gill Sans, sans-serif";
+$title-font-family: "Proxima Nova Extra Condensed Thin, sans-serif";
+
+//related classes
+
+.gill-sans-italic-light {
+  font-family: $body-font-family;
+  font-weight: 100;
+  font-style: italic;
+}
+/*
+  Methods found so far are rather hacky. Linear gradient probably best method, but need to look into this further.
+
+*/
+/* font sizes may need to be reduced on mobile */
+
+$base-font-size-in-px: 16;
+// use rem so scales with browser zoom (accessibility)
+
+.font-size-80 {
+  font-size: calc((60 / $base-font-size-in-px) * 1rem);
+}
+
+.font-size-60 {
+  font-size: calc((60 / $base-font-size-in-px) * 1rem);
+}
+
+.font-size-30 {
+  font-size: calc((30 / $base-font-size-in-px) * 1rem);
+}
+
+%title-shared {
+  font-family: $title-font-family;
+  margin-bottom: 2.375rem;
+  width: fit-content;
+}
+
+.title {
+  @extend %title-shared;
+  white-space: nowrap;
+}
+
+// https://generatepress.com/forums/topic/how-can-i-draw-a-partial-line-under-text/
+.underline:after {
+  content: "";
+  display: block;
+  width: 72%;
+  height: 1px;
+  background-color: $brand-dark;
+}
+
+.upper {
+  text-transform: uppercase;
+}

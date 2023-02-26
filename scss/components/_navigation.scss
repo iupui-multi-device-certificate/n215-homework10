@@ -1,0 +1,92 @@
+/*  from bootstrap */
+/* prevents overlap issue have w/ fixed */
+.sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+//need fixed for the hero to work on home page
+//also from bootstrap
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+$spacing-nav: calc((48 / $base-font-size-in-px) * 1rem);
+
+%navbar {
+  //Not sure best way to make more pronounced when bg color changes
+  // background-color: rgba($brand-light, 0.1);
+  // text-shadow: 1px 1px 1px black;
+  margin-left: auto;
+  margin-right: auto;
+  height: 90px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid;
+  margin-bottom: $spacing-nav;
+
+  .logo {
+    //not sure I see issue with logo styling
+
+    font-size: 1.25rem; //20px
+    padding-top: 30px;
+    border: solid thin;
+  }
+  .links {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 18px;
+    a {
+      text-decoration: none;
+      font-size: 15px;
+    }
+  }
+}
+
+.navbar {
+  @extend %navbar;
+
+  &--light-font {
+    // background-color: rgba($brand-light, 0.1);
+    color: $brand-light;
+    .links {
+      color: $brand-primary;
+      a {
+        color: $brand-light;
+      }
+    }
+  }
+
+  &--dark-font {
+    // background-color: rgba($brand-dark, 0.1);
+    color: $brand-dark;
+    .links {
+      color: $brand-primary;
+      a {
+        color: $brand-dark;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-lg) {
+  .navbar {
+    text-align: center;
+    .logo {
+      display: none;
+    }
+    .links {
+      justify-content: center;
+    }
+  }
+}
