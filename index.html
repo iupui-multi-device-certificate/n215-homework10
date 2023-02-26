@@ -9,7 +9,8 @@
   </head>
   <body>
     <div class="container">
-      <nav class="navbar navbar--light-font fixed-top">
+      <!-- TODO: change to light version on home -->
+      <nav class="navbar navbar--dark-font fixed-top">
         <!-- 
         NOTE: h1 should not be used for the logo
         https://www.fastcompany.com/3016894/should-your-tag-be-your-logo
@@ -25,177 +26,8 @@
           <a href="contact-us.html">contact us</a>
         </div>
       </nav>
-      <main>
-        <section class="hero">
-          <!-- semantic note: should be in h1, but having issues w/ styling -->
-          <h1 class="font-size-60 title">travel-fly</h1>
-          <p class="hero-cta gill-sans-italic-light">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat
-            aliquid minus nemo sed est.
-          </p>
-          <button class="btn btn--small hero-button">Read More</button>
-        </section>
-        <div class="inner-container">
-          <section class="tour-teasers promos">
-            <article class="tour-teaser">
-              <figure>
-                <img src="images/tours/israel-small.png" alt="" />
-                <figcaption>
-                  <h1 class="font-size-60 upper figure-title">Israel</h1>
-                  <h2 class="font-size-30 title">from $1000</h2>
-                  <a href="tour-israel.html" class="btn btn--round"
-                    >Learn More</a
-                  >
-                </figcaption>
-              </figure>
-            </article>
-            <article class="tour-teaser">
-              <figure>
-                <img src="images/tours/usa-small.png" alt="" />
-                <figcaption>
-                  <h1 class="font-size-60 upper figure-title">USA</h1>
-                  <h2 class="font-size-30 title">from $1500</h2>
-                  <a href="tour-usa.html" class="btn btn--round">Learn More</a>
-                </figcaption>
-              </figure>
-            </article>
-            <article class="tour-teaser">
-              <figure>
-                <img src="images/tours/australia-small.png" alt="" />
-                <figcaption>
-                  <h1 class="font-size-60 upper figure-title">Australia</h1>
-                  <h2 class="font-size-30 title">from $1800</h2>
-                  <a href="tour-australia.html" class="btn btn--round"
-                    >Learn More</a
-                  >
-                </figcaption>
-              </figure>
-            </article>
-          </section>
-          <section class="booking">
-            <h1 class="font-size-60">Booking form</h1>
-            <div class="wrapper-booking">
-              <form class="booking-form">
-                <div class="name-email">
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="name..."
-                    class="form-element"
-                  />
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="email..."
-                    class="form-element form-element-large"
-                  />
-                </div>
-                <div class="country-hotel">
-                  <input
-                    type="text"
-                    id="country"
-                    name="country"
-                    placeholder="country..."
-                    class="form-element"
-                  />
-                  <input
-                    type="text"
-                    id="hotel"
-                    name="hotel"
-                    placeholder="hotel..."
-                    class="form-element form-element-large"
-                  />
-                </div>
-                <!-- TODO: custom date picker icon, need to work in FF as well -->
-                <div class="check-in">
-                  <label for="check-in">Check-in</label>
-                  <input
-                    type="date"
-                    id="check-in"
-                    name="check-in"
-                    class="form-element form-element-x-large"
-                  />
-                </div>
-                <div class="check-out">
-                  <label for="check-out">Check-out</label>
-                  <input
-                    type="date"
-                    id="check-out"
-                    name="check-out"
-                    class="form-element form-element-x-large"
-                  />
-                </div>
-                <div class="selections">
-                  <label for="adult">Adult</label>
-                  <div class="select-wrapper">
-                    <select
-                      name="adult"
-                      id="adult"
-                      form="booking-form"
-                      class="form-element form-element-small"
-                    >
-                      <optgroup>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                      </optgroup>
-                    </select>
-                  </div>
-                  <label for="children">Children</label>
-                  <div class="select-wrapper">
-                    <select
-                      name="children"
-                      id="children"
-                      form="booking-form"
-                      class="form-element form-element-small"
-                    >
-                      <optgroup>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                      </optgroup>
-                    </select>
-                  </div>
-
-                  <label for="rooms">Room</label>
-                  <div class="select-wrapper">
-                    <select
-                      name="rooms"
-                      id="rooms"
-                      form="booking-form"
-                      class="form-element form-element-small"
-                    >
-                      <optgroup>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                      </optgroup>
-                    </select>
-                  </div>
-                </div>
-                <textarea
-                  name="message"
-                  id=""
-                  cols="30"
-                  rows="10"
-                  placeholder="message..."
-                  class="form-element message"
-                ></textarea>
-
-                <input
-                  type="submit"
-                  value="Submit"
-                  class="btn btn--round btn--wide"
-                />
-              </form>
-            </div>
-          </section>
-        </div>
+      <main class="content-width">
+        <div id="app"></div>
       </main>
 
       <footer>
@@ -212,5 +44,8 @@
         </div>
       </footer>
     </div>
+
+    <script src="lib/jquery-3.6.3.min.js"></script>
+    <script src="app/app.js" type="module"></script>
   </body>
 </html>
