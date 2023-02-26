@@ -8,11 +8,13 @@ body {
   font-weight: normal;
 }
 
-.container {
-  margin: 0 auto;
-  width: 80%;
+//note: at this time, we don't need a sticky footer?
 
-  min-height: 100%;
+.container {
   background-color: pink;
-  /* min-height: 100vh; */
+}
+
+.content-width {
+  width: 80%;
+  margin: 0 auto;
 }

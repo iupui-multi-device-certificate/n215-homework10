@@ -120,11 +120,12 @@ body {
 }
 
 .container {
-  margin: 0 auto;
-  width: 80%;
-  min-height: 100%;
   background-color: pink;
-  /* min-height: 100vh; */
+}
+
+.content-width {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .btn, .btn--round {
@@ -157,7 +158,6 @@ footer {
 }
 footer .footer-content {
   height: 100%;
-  width: 70%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -204,8 +204,9 @@ footer .social {
 .navbar {
   margin-left: auto;
   margin-right: auto;
+}
+.navbar .nav-content {
   height: 90px;
-  width: 70%;
   display: flex;
   align-items: center;
   justify-content: space-between;

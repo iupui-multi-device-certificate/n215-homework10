@@ -7,15 +7,16 @@
     <title>travel-fly</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body>
-    <div class="container">
-      <!-- TODO: change to light version on home -->
-      <nav class="navbar navbar--dark-font fixed-top">
-        <!-- 
+  <body class="container">
+    <!-- TODO: change to light version on home -->
+    <!-- bug: fixed-top is resulting in everything at top & not below nav. -->
+    <nav class="navbar navbar--dark-font sticky-top">
+      <!-- 
         NOTE: h1 should not be used for the logo
         https://www.fastcompany.com/3016894/should-your-tag-be-your-logo
         https://stackoverflow.com/questions/665037/replacing-h1-text-with-a-logo-image-best-method-for-seo-and-accessibility
       -->
+      <div class="nav-content content-width">
         <div class="logo">travel-fly</div>
         <div class="links">
           <!-- how get prettier to put each anchor on own line? -->
@@ -25,25 +26,25 @@
           <a href="blog.html">blog</a> |
           <a href="contact-us.html">contact us</a>
         </div>
-      </nav>
-      <main class="content-width">
-        <div id="app"></div>
-      </main>
+      </div>
+    </nav>
+    <main class="content-width">
+      <div id="app"></div>
+    </main>
 
-      <footer>
-        <div class="footer-content">
-          <div class="logo">travel-fly</div>
-          <div class="copyright">
-            Copyright 2019 travel-fly. All rights reserved
-          </div>
-          <div class="social">
-            <img src="images/icons/facebook.png" alt="facebook" />
-            <img src="images/icons/instagram.png" alt="instagram" />
-            <img src="images/icons/twitter.png" alt="twitter" />
-          </div>
+    <footer>
+      <div class="footer-content content-width">
+        <div class="logo">travel-fly</div>
+        <div class="copyright">
+          Copyright 2019 travel-fly. All rights reserved
         </div>
-      </footer>
-    </div>
+        <div class="social">
+          <img src="images/icons/facebook.png" alt="facebook" />
+          <img src="images/icons/instagram.png" alt="instagram" />
+          <img src="images/icons/twitter.png" alt="twitter" />
+        </div>
+      </div>
+    </footer>
 
     <script src="lib/jquery-3.6.3.min.js"></script>
     <script src="app/app.js" type="module"></script>
