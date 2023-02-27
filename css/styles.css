@@ -476,14 +476,14 @@ footer .social {
   grid-template-columns: repeat(3, 236px);
   gap: 3.438rem;
 }
-.tour-cards figure {
+.tour-cards figure.tour-card {
   position: relative;
   z-index: 1;
   max-width: 236px;
   max-height: 304px;
   color: #fff;
 }
-.tour-cards figure figcaption {
+.tour-cards figure.tour-card figcaption {
   max-width: 100%;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
@@ -498,11 +498,11 @@ footer .social {
   z-index: 2;
   overflow: hidden;
 }
-.tour-cards figure figcaption h1 {
+.tour-cards figure.tour-card figcaption h1 {
   margin-bottom: 0;
   white-space: nowrap;
 }
-.tour-cards figure figcaption .btn, .tour-cards figure figcaption .btn--round {
+.tour-cards figure.tour-card figcaption .btn, .tour-cards figure.tour-card figcaption .btn--round {
   margin-top: 3.563rem;
 }
 

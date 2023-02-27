@@ -1,12 +1,10 @@
-//TODO: should this have corresponding class??
-//TODO: link to individual tour page dyanamic via jQuery ? usually use routers for that stuff
 const renderTourCard = (tour) => `
-  <figure>
+  <figure class="tour-card">
     <img src="${tour.smallRelativeImagePath}" alt="" />
     <figcaption>
       <h1 class="font-size-60 upper">${tour.name}</h1>
       <h2 class="font-size-30 title">from $${tour.price}</h2>
-      <a href="#" class="btn btn--round">Learn More</a>
+      <a href="#" id=${tour.id} class="btn btn--round tour-learn-more">Learn More</a>
     </figcaption>
   </figure>
 `;
