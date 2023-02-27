@@ -259,31 +259,6 @@ footer .social {
     justify-content: center;
   }
 }
-figure {
-  position: relative;
-  z-index: 1;
-  max-width: 236px;
-  max-height: 304px;
-  color: #fff;
-}
-figure figcaption {
-  max-width: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 2;
-}
-figure figcaption .btn, figure figcaption .btn--round {
-  margin-top: 3.563rem;
-}
-
 .tour-teasers {
   display: grid;
   align-content: center;
@@ -494,6 +469,43 @@ figure figcaption .btn, figure figcaption .btn--round {
     width: 15%;
   }
 }
+.tour-cards {
+  width: 51.125rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 236px);
+  gap: 3.438rem;
+}
+.tour-cards figure {
+  position: relative;
+  z-index: 1;
+  max-width: 236px;
+  max-height: 304px;
+  color: #fff;
+}
+.tour-cards figure figcaption {
+  max-width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  overflow: hidden;
+}
+.tour-cards figure figcaption h1 {
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+.tour-cards figure figcaption .btn, .tour-cards figure figcaption .btn--round {
+  margin-top: 3.563rem;
+}
+
 .hero {
   height: 500px;
   width: 100%;

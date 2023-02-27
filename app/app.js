@@ -1,11 +1,11 @@
-import { figureCard } from "./views/components/_figureCardView.js";
+import { allTours } from "./controllers/tourCardsController.js";
 
 const titleBase = "travel-fly";
 // const changeContent = (contentID) => $("#app").html(eval(contentID));
 
 const setHome = () => {
   // $("#app").html(homeContent);
-  $("#app").html(figureCard);
+  $("#app").html(allTours);
   $(document).attr("title", `${titleBase} | HOME`);
 };
 

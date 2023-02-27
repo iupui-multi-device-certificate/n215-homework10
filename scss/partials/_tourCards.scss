@@ -1,0 +1,51 @@
+.tour-cards {
+  //818px total
+  width: 51.125rem;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 236px);
+
+  gap: 3.438rem; //55px
+
+  figure {
+    position: relative;
+    z-index: 1;
+
+    //should these be in em??
+    max-width: 236px;
+    max-height: 304px;
+    color: $brand-light;
+
+    figcaption {
+      max-width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 2;
+
+      //this keeps text form overflowing
+      //better would be to scale text to fit
+      //clamp??
+      overflow: hidden;
+
+      h1 {
+        margin-bottom: 0;
+        white-space: nowrap;
+      }
+
+      .btn {
+        margin-top: 3.563rem; //57px
+      }
+    }
+  }
+}

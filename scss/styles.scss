@@ -11,10 +11,12 @@
 @import "components/button";
 @import "components/footer";
 @import "components/navigation";
-@import "components/figureCard";
 @import "components/tour-teasers";
 @import "components/_banner";
 @import "components/form";
+
+//partials
+@import "partials/tourCards";
 
 //pages
 @import "pages/home";
