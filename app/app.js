@@ -2,12 +2,14 @@
 import { toursModel } from "./model.js";
 import { tourCardsView } from "./views/partials/_tourCardsView.js";
 import { tourDetailsView } from "./views/partials/_tourDetailsView.js";
+import { clientQuotes } from "./model.js";
+import { aboutView } from "./views/_aboutView.js";
 
 //home page
 const homePage = `Home page here`;
 
 //about
-const aboutPage = `About page here`;
+const aboutPage = aboutView(clientQuotes);
 
 //tours
 

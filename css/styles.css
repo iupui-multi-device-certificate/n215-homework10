@@ -546,38 +546,44 @@ footer .social {
 /* using bootstrap breakpoints
 https://getbootstrap.com/docs/5.2/layout/breakpoints/ */
 /* could be refactored to use a hamburger menu instead */
-.about-text {
+.about .about-text {
   margin-bottom: 6rem;
 }
 
-.quote {
-  width: 66%;
+.client-quotes .client-quote {
+  width: 75%;
   display: flex;
   gap: 1.375rem;
   padding-bottom: 2.25rem;
 }
-
-.client-image {
+.client-quotes .client-quote .client-image {
   width: 260px;
+  height: 150px;
 }
-
-.quote-text blockquote p {
+.client-quotes .client-quote .client-quote-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.client-quotes .client-quote .client-quote-text blockquote p {
   padding-bottom: 1.25rem;
-  font-style: italic;
 }
-
-.quote-author {
+.client-quotes .client-quote .client-quote-text .client-quote-author {
   text-align: right;
   color: #79addc;
+  font-size: 1.25rem;
 }
 
-@media only screen and (max-width: 992px) {
-  .quote {
+@media only screen and (max-width: 768px) {
+  .client-quotes .client-quote {
     width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+  }
+  .client-quotes .client-quote .client-quote-text {
+    width: 260px;
   }
 }
 .trip-plan-item {
