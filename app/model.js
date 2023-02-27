@@ -1,1 +1,1 @@
-export { toursModel } from "./data/tours.json";
+export { tours as toursModel } from "./data/tours.js";

@@ -1,22 +1,16 @@
-const titleBase = "travel-fly";
-// const changeContent = (contentID) => $("#app").html(eval(contentID));
+import { setPage } from "./controller.js";
 
-const setHome = () => {
-  // $("#app").html(homeContent);
-  $("#app").html(allTours);
-  $(document).attr("title", `${titleBase} | HOME`);
-};
+const titleBase = "travel-fly";
 
 function initListeners() {
-  // $("nav a").click(function (e) {
-  //   let aID = e.currentTarget.id;
-  //   $(document).attr("title", `Paw Savers | ${aID.toUpperCase()}`);
-  //   let contentID = aID + "Content";
-  //   changeContent(contentID);
-  // });
-  console.log("Hello World");
+  $("nav a").click(function (e) {
+    let aID = e.currentTarget.id;
+    // $(document).attr("title", `${titleBase}toUpperCase()}`);
+    let pageID = aID + "Page";
+    setPage(pageID);
+  });
 }
 $(document).ready(function () {
   initListeners();
-  setHome();
+  // setHome();
 });
