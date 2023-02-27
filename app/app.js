@@ -1,5 +1,3 @@
-import { allTours } from "./controllers/tourCardsController.js";
-
 const titleBase = "travel-fly";
 // const changeContent = (contentID) => $("#app").html(eval(contentID));
 
