@@ -1,6 +1,6 @@
 import { homeView } from "./views/_homeView.js";
 
-import { toursModel } from "./model.js";
+import { tours } from "./model.js";
 import {
   tourCardsView,
   tourPromosView,
@@ -19,7 +19,7 @@ import { blogView } from "./views/_blogView.js";
 import { contactView } from "./views/_contactView.js";
 
 //home page
-const homePage = homeView(tourPromosView(toursModel));
+const homePage = homeView(tourPromosView(tours));
 
 //about
 const aboutPage = aboutView(clientQuotes);
@@ -27,7 +27,7 @@ const aboutPage = aboutView(clientQuotes);
 //tours
 
 //need rest of page and routes to individual pages
-const toursPage = toursView(tourCardsView(toursModel));
+const toursPage = toursView(tourCardsView(tours));
 
 //TODO: make this more generic or should each page have own listener???
 export const toursPageListener = () =>
