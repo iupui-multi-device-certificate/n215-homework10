@@ -22,13 +22,13 @@ const renderPromoTours = (tours) => `
 `;
 
 export const tourCardsView = (tours) => `
-  <section class="tour-cards">
+  <section class="content-width tour-cards">
     ${renderTours(tours)}
   </section>
 `;
 
 export const tourPromosView = (tours) => `
-  <section class="tour-cards promos">
+  <section class="content-width tour-cards promos">
     ${renderPromoTours(tours)}
   </section>
 `;

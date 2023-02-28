@@ -23,7 +23,7 @@ const renderOffers = (offers) => `
 `;
 
 export const specialOffersView = (offers) => `
-<section class="special-offers">
+<section class="content-width special-offers">
 <h1 class="font-size-60 upper title underline">Special Offers(s):</h1>
 <div class="wrapper-special-offers">
   <!-- SEMANTIC: using article since independent enough contat that could be distributed to other sites -->

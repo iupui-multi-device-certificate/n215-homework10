@@ -302,7 +302,6 @@ footer .social {
   }
 }
 .banner-large {
-  width: 100%;
   height: auto;
   position: relative;
   margin-bottom: 3rem;
@@ -332,7 +331,6 @@ footer .social {
 }
 
 .banner-medium {
-  width: 100%;
   height: auto;
   position: relative;
   margin-bottom: 3rem;

@@ -20,7 +20,7 @@ const renderClientQuotes = (clientQuotes) => `
 `;
 
 export const aboutView = (clientQuotes) => `
-  <section class="about">
+  <section class="content-width about">
     <h1 class="font-size-60 upper title underline">About:</h1>
     <p class="about-text">
       Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -34,7 +34,7 @@ export const aboutView = (clientQuotes) => `
       magnam aliquam quaerat voluptatem.
     </p>
   </section>
-  <section class="client-quotes">
+  <section class="content-width client-quotes">
     <h2 class="font-size-30 title upper underline">CLIENT QUOTES:</h2>
     <!-- 
     SEMANTIC HTML use figure:

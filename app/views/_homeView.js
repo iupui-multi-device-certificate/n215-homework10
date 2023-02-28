@@ -1,6 +1,6 @@
 export const homeView = (tourPromos) => `
 
-  <section class="hero">
+  <section class="content-width hero">
   <!-- semantic note: should be in h1, but having issues w/ styling -->
   <h1 class="font-size-60 title">travel-fly</h1>
   <p class="hero-cta gill-sans-italic-light">
@@ -12,7 +12,7 @@ export const homeView = (tourPromos) => `
 
   ${tourPromos}
 
-  <section class="booking">
+  <section class="content-width booking">
     <h1 class="font-size-60">Booking form</h1>
     <div class="wrapper-booking">
       <form class="booking-form">

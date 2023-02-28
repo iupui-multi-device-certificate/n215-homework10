@@ -1,12 +1,10 @@
 $spacing-banner: calc((48 / $base-font-size-in-px) * 1rem);
+//widths set by the section class
 
 // https://dev.to/nazanin_ashrafi/how-to-darken-an-image-with-css-4f5h
-//TODO: refactor to mixin or extend class
-//TODO: fix height of image?
 
 //TODO: fix? text stops shrinking in FF at 443px
 .banner-large {
-  width: 100%;
   height: auto;
   position: relative;
   margin-bottom: $spacing-banner;
@@ -37,7 +35,6 @@ $spacing-banner: calc((48 / $base-font-size-in-px) * 1rem);
 }
 
 .banner-medium {
-  width: 100%;
   height: auto;
   position: relative;
   margin-bottom: $spacing-banner;
