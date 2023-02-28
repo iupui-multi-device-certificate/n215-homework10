@@ -1,6 +1,7 @@
 //theoretically views/partials could be moved up a level
 import { toursModel } from "./model.js";
 import { tourCardsView } from "./views/partials/_tourCardsView.js";
+import { toursView } from "./views/_toursView.js";
 import { tourDetailsView } from "./views/partials/_tourDetailsView.js";
 import { clientQuotes } from "./model.js";
 import { aboutView } from "./views/_aboutView.js";
@@ -22,7 +23,7 @@ const aboutPage = aboutView(clientQuotes);
 //tours
 
 //need rest of page and routes to individual pages
-const toursPage = tourCardsView(toursModel);
+const toursPage = toursView(tourCardsView(toursModel));
 
 //TODO: make this more generic or should each page have own listener???
 export const toursPageListener = () =>
