@@ -11,6 +11,8 @@ import { specialOffersView } from "./views/_specialOffersView.js";
 import { blogs } from "./model.js";
 import { blogView } from "./views/_blogView.js";
 
+import { contactView } from "./views/_contactView.js";
+
 //home page
 const homePage = `Home page here`;
 
@@ -37,7 +39,7 @@ const specialOffersPage = specialOffersView(specialOffers);
 const blogPage = blogView(blogs);
 
 //contact us
-const contactUsPage = `Contact us page here`;
+const contactUsPage = contactView;
 
 const setPage = (pageID) => {
   $("#app").html(eval(pageID));
