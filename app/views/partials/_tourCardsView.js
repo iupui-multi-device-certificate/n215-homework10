@@ -16,7 +16,7 @@ const renderTours = (tours) => `
 //could be combined into renderTours, pass boolean for promo
 const renderPromoTours = (tours) => `
   ${tours
-    .slice(0, 2)
+    .slice(0, 3)
     .map((tour) => renderTourCard(tour))
     .join("")}
 `;
@@ -24,5 +24,11 @@ const renderPromoTours = (tours) => `
 export const tourCardsView = (tours) => `
   <section class="tour-cards">
     ${renderTours(tours)}
+  </section>
+`;
+
+export const tourPromosView = (tours) => `
+  <section class="tour-cards promos">
+    ${renderPromoTours(tours)}
   </section>
 `;

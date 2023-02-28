@@ -1,6 +1,10 @@
-//theoretically views/partials could be moved up a level
+import { homeView } from "./views/_homeView.js";
+
 import { toursModel } from "./model.js";
-import { tourCardsView } from "./views/partials/_tourCardsView.js";
+import {
+  tourCardsView,
+  tourPromosView,
+} from "./views/partials/_tourCardsView.js";
 import { toursView } from "./views/_toursView.js";
 import { tourDetailsView } from "./views/partials/_tourDetailsView.js";
 import { clientQuotes } from "./model.js";
@@ -15,7 +19,7 @@ import { blogView } from "./views/_blogView.js";
 import { contactView } from "./views/_contactView.js";
 
 //home page
-const homePage = `Home page here`;
+const homePage = homeView(tourPromosView(toursModel));
 
 //about
 const aboutPage = aboutView(clientQuotes);
