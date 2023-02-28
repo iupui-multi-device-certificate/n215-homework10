@@ -9,12 +9,13 @@ export const tours = [
     id: 1,
     name: "Israel",
     price: 1000,
-    smallRelativeImagePath: "./images/tours/israel-small.png",
-    largeRelativeImagePath: "./images/tours/israel-large.png",
-    highlightRelativeImagePaths: [
-      "./images/tours/israel-tour-01.png",
-      "./images/tours/israel-tour-02.png",
-      "./images/tours/israel-tour-03.png",
+    imagePath: "./images/tours/",
+    imageSmall: "israel-small.png",
+    imageLarge: "israel-large.png",
+    imageHighlights: [
+      "israel-tour-01.png",
+      "israel-tour-02.png",
+      "israel-tour-03.png",
     ],
     plan: [
       {
@@ -50,13 +51,10 @@ export const tours = [
     id: 2,
     name: "U.S.A",
     price: 1000,
-    smallRelativeImagePath: "./images/tours/usa-small.png",
-    largeRelativeImagePath: "./images/tours/usa-large.png",
-    highlightRelativeImagePaths: [
-      "./images/tours/usa-tour-01.png",
-      "./images/tours/usa-tour-02.png",
-      "./images/tours/usa-tour-03.png",
-    ],
+    imagePath: "./images/tours/",
+    imageSmall: "usa-small.png",
+    imageLarge: "usa-large.png",
+    imageHighlights: ["usa-tour-01.png", "usa-tour-02.png", "usa-tour-03.png"],
     plan: [
       {
         day: 1,
@@ -91,13 +89,10 @@ export const tours = [
     id: 3,
     name: "Australia",
     price: 1800,
-    smallRelativeImagePath: "./images/tours/aus-small.png",
-    largeRelativeImagePath: "./images/tours/aus-large.png",
-    highlightRelativeImagePaths: [
-      "./images/tours/aus-tour-01.png",
-      "./images/tours/aus-tour-02.png",
-      "./images/tours/aus-tour-03.png",
-    ],
+    imagePath: "./images/tours/",
+    imageSmall: "aus-small.png",
+    imageLarge: "aus-large.png",
+    imageHighlights: ["aus-tour-01.png", "aus-tour-02.png", "aus-tour-03.png"],
     plan: [
       {
         day: 1,
@@ -132,13 +127,10 @@ export const tours = [
     id: 4,
     name: "New Zealand",
     price: 1200,
-    smallRelativeImagePath: "./images/tours/nz-small.png",
-    largeRelativeImagePath: "./images/tours/nz-large.png",
-    highlightRelativeImagePaths: [
-      "./images/tours/nz-tour-01.png",
-      "./images/tours/nz-tour-02.png",
-      "./images/tours/nz-tour-03.png",
-    ],
+    imagePath: "./images/tours/",
+    imageSmall: "nz-small.png",
+    imageLarge: "nz-large.png",
+    imageHighlights: ["nz-tour-01.png", "nz-tour-02.png", "nz-tour-03.png"],
     plan: [
       {
         day: 1,
@@ -173,12 +165,13 @@ export const tours = [
     id: 5,
     name: "France",
     price: 2500,
-    smallRelativeImagePath: "./images/tours/france-small.png",
-    largeRelativeImagePath: "./images/tours/france-large.png",
-    highlightRelativeImagePaths: [
-      "./images/tours/france-tour-01.png",
-      "./images/tours/france-tour-02.png",
-      "./images/tours/france-tour-03.png",
+    imagePath: "./images/tours/",
+    imageSmall: "france-small.png",
+    imageLarge: "france-large.png",
+    imageHighlights: [
+      "france-tour-01.png",
+      "france-tour-02.png",
+      "france-tour-03.png",
     ],
     plan: [
       {
@@ -214,12 +207,13 @@ export const tours = [
     id: 6,
     name: "Egypt",
     price: 900,
-    smallRelativeImagePath: "./images/tours/egypt-small.png",
-    largeRelativeImagePath: "./images/tours/egypt-large.png",
-    highlightRelativeImagePaths: [
-      "./images/tours/egypt-tour-01.png",
-      "./images/tours/egypt-tour-02.png",
-      "./images/tours/egypt-tour-03.png",
+    imagePath: "./images/tours/",
+    imageSmall: "egypt-small.png",
+    imageLarge: "egypt-large.png",
+    imageHighlights: [
+      "egypt-tour-01.png",
+      "egypt-tour-02.png",
+      "egypt-tour-03.png",
     ],
     plan: [
       {
@@ -255,12 +249,13 @@ export const tours = [
     id: 7,
     name: "Japan",
     price: 1300,
-    smallRelativeImagePath: "./images/tours/japan-small.png",
-    largeRelativeImagePath: "./images/tours/japan-large.png",
-    highlightRelativeImagePaths: [
-      "./images/tours/japan-tour-01.png",
-      "./images/tours/japan-tour-02.png",
-      "./images/tours/japan-tour-03.png",
+    imagePath: "./images/tours/",
+    imageSmall: "japan-small.png",
+    imageLarge: "japan-large.png",
+    imageHighlights: [
+      "japan-tour-01.png",
+      "japan-tour-02.png",
+      "japan-tour-03.png",
     ],
     plan: [
       {
@@ -296,12 +291,13 @@ export const tours = [
     id: 8,
     name: "Canada",
     price: 2000,
-    smallRelativeImagePath: "./images/tours/canada-small.png",
-    largeRelativeImagePath: "./images/tours/canada-large.png",
-    highlightRelativeImagePaths: [
-      "./images/tours/canada-tour-01.png",
-      "./images/tours/canada-tour-02.png",
-      "./images/tours/canada-tour-03.png",
+    imagePath: "./images/tours/",
+    imageSmall: "canada-small.png",
+    imageLarge: "canada-large.png",
+    imageHighlights: [
+      "canada-tour-01.png",
+      "canada-tour-02.png",
+      "canada-tour-03.png",
     ],
     plan: [
       {
@@ -337,13 +333,10 @@ export const tours = [
     id: 9,
     name: "U.A.E.",
     price: 3000,
-    smallRelativeImagePath: "./images/tours/uae-small.png",
-    largeRelativeImagePath: "./images/tours/uae-large.png",
-    highlightRelativeImagePaths: [
-      "./images/tours/uae-tour-01.png",
-      "./images/tours/uae-tour-02.png",
-      "./images/tours/uae-tour-03.png",
-    ],
+    imagePath: "./images/tours/",
+    imageSmall: "uae-small.png",
+    imageLarge: "uae-large.png",
+    imageHighlights: ["uae-tour-01.png", "uae-tour-02.png", "uae-tour-03.png"],
     plan: [
       {
         day: 1,
