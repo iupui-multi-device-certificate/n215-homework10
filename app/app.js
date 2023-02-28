@@ -8,6 +8,9 @@ import { aboutView } from "./views/_aboutView.js";
 import { specialOffers } from "./model.js";
 import { specialOffersView } from "./views/_specialOffersView.js";
 
+import { blogs } from "./model.js";
+import { blogView } from "./views/_blogView.js";
+
 //home page
 const homePage = `Home page here`;
 
@@ -27,12 +30,11 @@ export const toursPageListener = () =>
     console.log(aID);
   });
 
-//blog
-
-const blogPage = `Blog page here`;
-
 //special-offers
 const specialOffersPage = specialOffersView(specialOffers);
+
+//blog
+const blogPage = blogView(blogs);
 
 //contact us
 const contactUsPage = `Contact us page here`;
