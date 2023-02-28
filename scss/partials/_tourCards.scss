@@ -1,10 +1,15 @@
+// $imageWidth: 236px;
+//use rem for more responsive sizing
+$imageWidth: 14.75rem;
+
 .tour-cards {
   //818px total
-  width: 51.125rem;
-  margin: 0 auto;
 
   display: grid;
-  grid-template-columns: repeat(3, 236px);
+  grid-template-columns: repeat(3, $imageWidth);
+
+  justify-content: center;
+  align-items: center;
 
   gap: 3.438rem; //55px
 
@@ -47,5 +52,19 @@
         margin-top: 3.563rem; //57px
       }
     }
+  }
+}
+
+//reduce gap
+@media only screen and (max-width: $breakpoint-lg) {
+  .tour-cards {
+    gap: 2rem;
+    grid-template-columns: repeat(2, $imageWidth);
+  }
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+  .tour-cards {
+    grid-template-columns: $imageWidth;
   }
 }

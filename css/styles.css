@@ -465,10 +465,10 @@ footer .social {
   }
 }
 .tour-cards {
-  width: 51.125rem;
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 236px);
+  grid-template-columns: repeat(3, 14.75rem);
+  justify-content: center;
+  align-items: center;
   gap: 3.438rem;
 }
 .tour-cards figure.tour-card {
@@ -501,6 +501,17 @@ footer .social {
   margin-top: 3.563rem;
 }
 
+@media only screen and (max-width: 992px) {
+  .tour-cards {
+    gap: 2rem;
+    grid-template-columns: repeat(2, 14.75rem);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .tour-cards {
+    grid-template-columns: 14.75rem;
+  }
+}
 .hero {
   height: 500px;
   width: 100%;
