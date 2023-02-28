@@ -252,9 +252,6 @@ footer .social {
   .navbar {
     text-align: center;
   }
-  .navbar .logo {
-    display: none;
-  }
   .navbar .links {
     justify-content: center;
   }
