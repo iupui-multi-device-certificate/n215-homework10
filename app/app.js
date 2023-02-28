@@ -5,6 +5,9 @@ import { tourDetailsView } from "./views/partials/_tourDetailsView.js";
 import { clientQuotes } from "./model.js";
 import { aboutView } from "./views/_aboutView.js";
 
+import { specialOffers } from "./model.js";
+import { specialOffersView } from "./views/_specialOffersView.js";
+
 //home page
 const homePage = `Home page here`;
 
@@ -29,7 +32,7 @@ export const toursPageListener = () =>
 const blogPage = `Blog page here`;
 
 //special-offers
-const specialOffersPage = `Special Offers page here`;
+const specialOffersPage = specialOffersView(specialOffers);
 
 //contact us
 const contactUsPage = `Contact us page here`;
