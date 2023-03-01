@@ -6,7 +6,7 @@ export const tourDetailView = (tour) =>
   <div class="banner-text">
     <h1 class="font-size-60 figure-title">${tour.name} tour package:</h1>
     <div class="font-size-30 figure-title upper align-right">
-      Starting from ${tour.price}
+      Starting from $${tour.price}
     </div>
   </div>
 </section>
