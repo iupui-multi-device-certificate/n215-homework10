@@ -427,14 +427,19 @@ footer .social {
     width: 15%;
   }
 }
+/* 
+  note: CSS Grid used to keep this to 3 columns on large screens
+  ? display flex using columns would typically be used, but how to divide up unknown number of elements into three div columns in the view? or use flex basis (haven't figured that out either)?
+*/
 .tour-cards {
   display: grid;
-  grid-template-columns: repeat(3, 14.75rem);
+  grid-template-columns: repeat(3, minmax(14.75rem, 1fr));
   justify-content: center;
   align-items: center;
-  gap: 3.438rem;
+  gap: 2rem;
 }
 .tour-cards figure.tour-card {
+  justify-self: center;
   position: relative;
   z-index: 1;
   max-width: 236px;
@@ -465,12 +470,6 @@ footer .social {
 }
 
 @media only screen and (max-width: 992px) {
-  .tour-cards {
-    gap: 2rem;
-    grid-template-columns: repeat(2, 14.75rem);
-  }
-}
-@media only screen and (max-width: 768px) {
   .tour-cards {
     grid-template-columns: 14.75rem;
   }
