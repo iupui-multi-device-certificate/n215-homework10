@@ -41,7 +41,6 @@ $image-height: 150px;
   }
 }
 
-//TODO: check w/ grader - what breakpoint acceptable to go down to one column?
 @media only screen and (max-width: $breakpoint-md) {
   .client-quotes {
     .client-quote {

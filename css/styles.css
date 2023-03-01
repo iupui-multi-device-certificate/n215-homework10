@@ -86,7 +86,7 @@ select {
   font-size: 1.875rem;
 }
 
-.tour-teaser figure figcaption .figure-title, .title {
+.title {
   font-family: "Proxima Nova Extra Condensed Thin, sans-serif";
   margin-bottom: 2.375rem;
   width: -moz-fit-content;
@@ -254,48 +254,6 @@ footer .social {
   }
   .navbar .links {
     justify-content: center;
-  }
-}
-.tour-teasers {
-  display: grid;
-  align-content: center;
-  justify-content: center;
-  grid-template-columns: repeat(3, minmax(236px, 1fr));
-  gap: 2rem;
-}
-
-.tour-teaser {
-  justify-self: center;
-}
-.tour-teaser figure {
-  position: relative;
-  width: 236px;
-  height: 304px;
-  background: #000;
-}
-.tour-teaser figure img {
-  opacity: 0.5;
-}
-.tour-teaser figure figcaption {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  color: #fff;
-}
-.tour-teaser figure figcaption .figure-title {
-  margin-bottom: 0;
-  white-space: nowrap;
-}
-
-@media only screen and (max-width: 992px) {
-  .tour-teasers {
-    grid-template-columns: 1fr;
   }
 }
 .banner-large {

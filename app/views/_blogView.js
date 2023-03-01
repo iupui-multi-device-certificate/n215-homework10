@@ -28,7 +28,7 @@ const renderBlogs = (blogs) => ` ${blogs
 
 export const blogView = (blogs) => `
 <section class="content-width blog">
-<!-- TODO: check w/ designer -- why is blog title different proportionate length than rest? -->
+<!-- ? why is blog title different proportionate length than rest? -->
 <h1 class="font-size-60 title upper underline">BLOG:</h1>
 <div class="blogs">
   ${renderBlogs(blogs)}
