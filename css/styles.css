@@ -590,7 +590,7 @@ https://getbootstrap.com/docs/5.2/layout/breakpoints/ */
   gap: 20px;
 }
 .wrapper-special-offers .offer .info {
-  width: 290px;
+  max-width: 290px;
   display: flex;
   flex-direction: column;
 }
@@ -602,6 +602,15 @@ https://getbootstrap.com/docs/5.2/layout/breakpoints/ */
   font-weight: 100;
 }
 
+@media only screen and (max-width: 768px) {
+  .offer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .offer .info {
+    align-items: center;
+  }
+}
 .blogs {
   display: flex;
   flex-direction: column;

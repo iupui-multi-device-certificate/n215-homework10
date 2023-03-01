@@ -12,7 +12,7 @@ const renderOffer = (offer) => `
     <div class="gill-sans-light">
       ${offer.description}
     </div>
-    <a href="#" class="btn btn--medium btn--round"
+    <a href="#" class="btn btn--small btn--round"
       >Learn More</a
     >
   </div>
