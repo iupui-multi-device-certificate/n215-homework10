@@ -119,10 +119,6 @@ body {
   font-weight: normal;
 }
 
-.container {
-  background-color: pink;
-}
-
 .content-width {
   width: 80%;
   margin: 0 auto;
