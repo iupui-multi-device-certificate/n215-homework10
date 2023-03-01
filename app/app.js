@@ -25,10 +25,9 @@ const homePage = homeView(tourPromosView(tours));
 const aboutPage = aboutView(clientQuotes);
 
 //tours
-
-//need rest of page and routes to individual pages
 const toursPage = toursView(tourCardsView(tours));
 
+//tour detail
 const tourClickHandler = (e) => {
   let tourID = e.currentTarget.id;
 
@@ -55,31 +54,23 @@ const setPage = (pageID) => {
   $("#app").html(eval(pageID));
 };
 
+const navClickHandler = (e) => {
+  let aID = e.currentTarget.id;
+  // $(document).attr("title", `${titleBase}toUpperCase()}`);
+  let pageID = aID + "Page";
+  setPage(pageID);
+};
 const titleBase = "travel-fly";
 
 function initListeners() {
   $("nav a").click(function (e) {
-    let aID = e.currentTarget.id;
-    // $(document).attr("title", `${titleBase}toUpperCase()}`);
-    let pageID = aID + "Page";
-    setPage(pageID);
+    navClickHandler(e);
   });
 
+  //can't remember why, but $(".tour-learn-more").click did not detect clicks.
   $(document).on("click", ".tour-learn-more", function (e) {
-    // console.log("tour-learn-more clicked");
-    console.log(e.currentTarget.id);
     tourClickHandler(e);
   });
-
-  //   let tourID = e.currentTarget.id;
-  //   console.log("clicked tourID: ", tourID);
-  //   // const getTour = (tourID) => tours.find((tour) => (tour.id = tourID));
-
-  //   // const requestedTour = getTour(tourID);
-
-  //   // const tourPage = tourDetailView(requestedTour);
-  //   // $("#app").html(tourPage);
-  // });
 }
 $(document).ready(function () {
   initListeners();
