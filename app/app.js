@@ -6,7 +6,7 @@ import {
   tourPromosView,
 } from "./views/partials/_tourCardsView.js";
 import { toursView } from "./views/_toursView.js";
-import { tourDetailsView } from "./views/partials/_tourDetailsView.js";
+import { tourDetailView } from "./views/_tourDetailView.js";
 import { clientQuotes } from "./model.js";
 import { aboutView } from "./views/_aboutView.js";
 
@@ -29,15 +29,20 @@ const aboutPage = aboutView(clientQuotes);
 //need rest of page and routes to individual pages
 const toursPage = toursView(tourCardsView(tours));
 
-//TODO: make this more generic or should each page have own listener???
-export const toursPageListener = () =>
-  $(".tour-learn-more").click(function (e) {
-    // console.log("Hello World");
-    let aID = e.currentTarget.id;
-    console.log(aID);
-  });
+const tourClickHandler = (e) => {
+  let tourID = e.currentTarget.id;
 
-//special-offers
+  //if use === get undefined because tour.id is a number
+  //ideally should convert so they're on same data type & then use ===
+  const getTour = (tourID) => tours.find((tour) => tourID == tour.id);
+
+  const requestedTour = getTour(tourID);
+
+  const tourPage = tourDetailView(requestedTour);
+
+  $("#app").html(tourPage);
+};
+
 const specialOffersPage = specialOffersView(specialOffers);
 
 //blog
@@ -58,10 +63,26 @@ function initListeners() {
     // $(document).attr("title", `${titleBase}toUpperCase()}`);
     let pageID = aID + "Page";
     setPage(pageID);
-    toursPageListener();
   });
+
+  $(document).on("click", ".tour-learn-more", function (e) {
+    // console.log("tour-learn-more clicked");
+    console.log(e.currentTarget.id);
+    tourClickHandler(e);
+  });
+
+  //   let tourID = e.currentTarget.id;
+  //   console.log("clicked tourID: ", tourID);
+  //   // const getTour = (tourID) => tours.find((tour) => (tour.id = tourID));
+
+  //   // const requestedTour = getTour(tourID);
+
+  //   // const tourPage = tourDetailView(requestedTour);
+  //   // $("#app").html(tourPage);
+  // });
 }
 $(document).ready(function () {
   initListeners();
+
   // setHome();
 });

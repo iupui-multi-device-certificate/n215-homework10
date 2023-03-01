@@ -4,7 +4,7 @@ const renderTourCard = (tour) => `
     <figcaption>
       <h1 class="font-size-60 upper">${tour.name}</h1>
       <h2 class="font-size-30 title">from $${tour.price}</h2>
-      <a href="#" id=${tour.id} class="btn btn--round tour-learn-more">Learn More</a>
+      <a href="#" id="${tour.id}" class="btn btn--round tour-learn-more">Learn More</a>
     </figcaption>
   </figure>
 `;
