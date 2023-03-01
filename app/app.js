@@ -54,6 +54,10 @@ const setPage = (pageID) => {
   $("#app").html(eval(pageID));
 };
 
+const initHome = () => {
+  $("#app").html(homePage);
+};
+
 const setNavBar = (pageID) => {
   //make use of built-in conditional
   //https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
@@ -85,5 +89,5 @@ function initListeners() {
 $(document).ready(function () {
   initListeners();
 
-  // setHome();
+  initHome();
 });
