@@ -74,7 +74,9 @@ beatae vitae dicta sunt explicabo.
     imagePath: "./images/tours/",
     imageSmall: "aus-small.png",
     imageLarge: "aus-large.png",
-    imageHighlights: ["aus-tour-01.png", "aus-tour-02.png", "aus-tour-03.png"],
+    image01: "aus-tour-01.png",
+    image02: "aus-tour-02.png",
+    image03: "aus-tour-03.png",
 
     day01: `<p>
     Sed ut perspiciatis unde omnis iste natus error sit voluptatem

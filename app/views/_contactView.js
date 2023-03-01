@@ -3,7 +3,7 @@ export const contactView = `
     <h1 class="font-size-60 upper title underline">Contact Us:</h1>
     <div class="wrapper-contact">
       <div class="location">
-        <img src="../images/map.png" class="map" alt="" />
+        <img src="./images/map.png" class="map" alt="" />
         <!-- Semantic HTML: 
         use address tag https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address 
         https://html.spec.whatwg.org/multipage/sections.html#the-address-element
