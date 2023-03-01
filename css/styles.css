@@ -229,23 +229,32 @@ footer .social {
   font-size: 15px;
 }
 
-.navbar--light-font {
-  color: #fff;
-}
-.navbar--light-font .links {
-  color: #79addc;
-}
-.navbar--light-font .links a {
-  color: #fff;
-}
-.navbar--dark-font {
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
   color: #000;
 }
-.navbar--dark-font .links {
+.navbar .links {
   color: #79addc;
 }
-.navbar--dark-font .links a {
+.navbar .links a {
   color: #000;
+}
+
+.navbar--home {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  color: #fff;
+}
+.navbar--home .links {
+  color: #79addc;
+}
+.navbar--home .links a {
+  color: #fff;
 }
 
 @media only screen and (max-width: 992px) {

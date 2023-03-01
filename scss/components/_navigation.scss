@@ -54,31 +54,65 @@ $spacing-nav: calc((48 / $base-font-size-in-px) * 1rem);
   }
 }
 
+//nesting shortcut, e.g. &--, made this too complicated for toggling the class because of using multiple classes
+//default navbar sticky w/ black text
 .navbar {
   @extend %navbar;
 
-  &--light-font {
-    // background-color: rgba($brand-light, 0.1);
-    color: $brand-light;
-    .links {
-      color: $brand-primary;
-      a {
-        color: $brand-light;
-      }
-    }
-  }
+  position: sticky;
+  top: 0;
+  z-index: 1020;
 
-  &--dark-font {
-    // background-color: rgba($brand-dark, 0.1);
-    color: $brand-dark;
-    .links {
-      color: $brand-primary;
-      a {
-        color: $brand-dark;
-      }
+  color: $brand-dark;
+  .links {
+    color: $brand-primary;
+    a {
+      color: $brand-dark;
     }
   }
 }
+
+//home navbar fixed w/ white text
+.navbar--home {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+
+  color: $brand-light;
+  .links {
+    color: $brand-primary;
+    a {
+      color: $brand-light;
+    }
+  }
+}
+// .navbar {
+//   @extend %navbar;
+
+//   &--light-font {
+//     // background-color: rgba($brand-light, 0.1);
+//     color: $brand-light;
+//     .links {
+//       color: $brand-primary;
+//       a {
+//         color: $brand-light;
+//       }
+//     }
+//   }
+
+//   &--dark-font {
+//     // background-color: rgba($brand-dark, 0.1);
+//     color: $brand-dark;
+//     .links {
+//       color: $brand-primary;
+//       a {
+//         color: $brand-dark;
+//       }
+//     }
+//   }
+// }
 
 @media only screen and (max-width: $breakpoint-lg) {
   .navbar {
